@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>十一科技河北分院信息导航</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 新增：站点图标 -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+    .page { max-width: 1400px; margin: 0 auto; padding: 24px 16px 40px; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e7f0;
+    }
+    .title { font-size: 24px; font-weight: 600; color: #111827; }
+    .subtitle { font-size: 13px; color: #6b7280; margin-top: 4px; }
+    .env-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .section { margin-top: 24px; }
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-badge {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #e5f2ff;
+      color: #2563eb;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #e5e7f0;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 96px;
+    }
+    .card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+      border-color: #3b82f6;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+    .card-name { font-size: 15px; font-weight: 600; color: #111827; }
+    .card-tag {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #2563eb;
+      white-space: nowrap;
+    }
+    .card-desc { font-size: 12px; color: #6b7280; line-height: 1.4; }
+    .card-footer {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .card-link { color: #2563eb; text-decoration: underline; text-underline-offset: 2px; }
+    .badge-soon {
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .header { flex-direction: column; gap: 6px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <div class="title">十一科技河北分院信息导航</div>
+        <div class="subtitle">集中入口，统一访问分院常用 Web 系统与应用（注意：移动端可能出现显示问题，请使用PC浏览器打开）。</div>
+      </div>
+      <div class="env-tag">内网导航 · v1.0</div>
+    </header>
+
+    <!-- 生产中使用的系统 -->
+    <section class="section">
+      <div class="section-title">
+        当前运行系统
+        <span class="section-badge">已上线</span>
+      </div>
+      <div class="grid">
+
+        <!-- 河北分院网盘 -->
+        <a class="card" href="https://192.168.1.254" title="内网网盘服务" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">HBCloud 河北分院网盘</div>
+              <div class="card-tag">内网文件共享</div>
+            </div>
+            <div class="card-desc">
+              文件共享迁移为 Web 版内网网盘，统一文件访问、上传和权限管理，提升易用性与安全性。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>地址：https://192.168.1.254</span>
+            <span class="card-link">打开网盘</span>
+          </div>
+        </a>
+
+        <!-- 公用电脑仓库（CMS v1.1.0） -->
+        <a class="card" href="http://192.168.1.254:8081" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">公用电脑仓库</div>
+              <div class="card-tag">CMS v1.1.0</div>
+            </div>
+            <div class="card-desc">
+              分院公用电脑与资产的集中管理平台，支持资产明细、借用/归还记录、健康状态跟踪和导出统计等功能。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>地址：192.168.1.254</span>
+            <span class="card-link">打开系统</span>
+          </div>
+        </a>
+
+        <!-- 分院防火墙管理界面 -->
+        <a class="card" href="https://192.168.1.1/" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">分院防火墙</div>
+              <div class="card-tag">安全管理</div>
+            </div>
+            <div class="card-desc">
+              分院边界防火墙管理入口，从此无需手动输入地址，统一从导航页跳转访问（需有相应账号权限）。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>地址：https://192.168.1.1/</span>
+            <span class="card-link">打开管理界面</span>
+          </div>
+        </a>
+
+        <!-- 分院办公系统（薪福通 OA） -->
+        <a class="card" href="https://xft.cmbchina.com/" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">分院办公系统（薪福通）</div>
+              <div class="card-tag">OA / 考勤 / 流程</div>
+            </div>
+            <div class="card-desc">
+              分院日常办公 OA 系统入口（薪福通），用于流程审批、考勤、费用报销等办公场景的统一处理。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>地址：https://xft.cmbchina.com/</span>
+            <span class="card-link">打开 OA 系统</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 规划中的系统，占位链接 -->
+    <section class="section">
+      <div class="section-title">
+        规划中系统
+        <span class="section-badge">预留入口 · 可扩展</span>
+      </div>
+      <div class="grid">
+        <!-- 1. 分院信息资产管理 -->
+        <a class="card" href="#" title="未来将接入信息资产采集与管理系统" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">分院信息资产管理</div>
+              <div class="card-tag">资产采集 / 配置管理</div>
+            </div>
+            <div class="card-desc">
+              计划将现有 exe 采集程序升级为 Web 版信息资产采集与管理平台，统一信息资产台账和配置变更记录。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="badge-soon">规划中 · 暂未开放</span>
+            <span class="card-link">占位链接</span>
+          </div>
+        </a>
+
+        <!-- 2. 河北分院信息中心门户 -->
+        <a class="card" href="#" title="未来的信息中心门户与更多功能集成平台" target="_blank" rel="noopener">
+          <div>
+            <div class="card-header">
+              <div class="card-name">信息中心（门户）</div>
+              <div class="card-tag">信息中心展示 / 集成</div>
+            </div>
+            <div class="card-desc">
+              规划中的河北分院信息中心门户，将作为信息化建设成果展示及更多系统集成的统一入口。
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="badge-soon">规划中 · 暂未开放</span>
+            <span class="card-link">占位链接</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 预留：未来可以在此处增加更多分组与卡片 -->
+    <!-- ...未来扩展区块... -->
+
+    <footer>
+      十一科技河北分院 · 信息中心 · 导航页<br />
+      （本页仅供内网使用，后续可根据实际系统接入情况进行扩展与维护。）
+    </footer>
+  </div>
+</body>
+</html>
